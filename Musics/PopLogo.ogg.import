@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/PopLogo.ogg-fd337c51186f8225449a87ae36d9421d.oggstr"
+
+[deps]
+
+source_file="res://Musics/PopLogo.ogg"
+dest_files=[ "res://.import/PopLogo.ogg-fd337c51186f8225449a87ae36d9421d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

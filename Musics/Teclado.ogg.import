@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Teclado.ogg-83c9edddf5a6271b49eb6101e9d504d9.oggstr"
+
+[deps]
+
+source_file="res://Musics/Teclado.ogg"
+dest_files=[ "res://.import/Teclado.ogg-83c9edddf5a6271b49eb6101e9d504d9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

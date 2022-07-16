@@ -1,0 +1,1887 @@
+[gd_scene load_steps=64 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Cenas/Clicker.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/Roboto-Light.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Cenas/Main.gd" type="Script" id=4]
+[ext_resource path="res://Fonts/Roboto-Black.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Cenas/Loja.gd" type="Script" id=6]
+[ext_resource path="res://Cenas/Text.gd" type="Script" id=7]
+[ext_resource path="res://Cenas/Archiviments.gd" type="Script" id=8]
+[ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Cenas/Achives.gd" type="Script" id=10]
+[ext_resource path="res://Musics/Teclado.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Musics/Notification.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Musics/Button.ogg" type="AudioStream" id=13]
+[ext_resource path="res://Cenas/Final.gd" type="Script" id=14]
+[ext_resource path="res://Musics/Git.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Musics/Buttons.ogg" type="AudioStream" id=16]
+
+[sub_resource type="CanvasItemMaterial" id=20]
+
+[sub_resource type="Curve" id=21]
+_data = [ Vector2( 0.00980392, 0.730682 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.167045 ), -0.593455, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=22]
+colors = PoolColorArray( 1, 1, 1, 0.192157, 1, 1, 1, 0 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 14
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=34]
+bg_color = Color( 0.0980392, 0.0980392, 0.14902, 1 )
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=15]
+size = 20
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.0588235, 0.0588235, 0.0941176, 1 )
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.141176, 0.141176, 0.192157, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=26]
+size = 25
+font_data = ExtResource( 9 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.745098, 0, 0, 1 )
+border_width_bottom = 10
+border_color = Color( 0.494118, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=19]
+size = 25
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.0596924, 0.0596924, 0.09375, 1 )
+corner_radius_top_left = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.0980392, 0.0980392, 0.14902, 1 )
+corner_radius_top_left = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.0980392, 0.0980392, 0.14902, 1 )
+corner_radius_top_left = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.0588235, 0.0588235, 0.0941176, 1 )
+corner_radius_top_left = 20
+corner_radius_bottom_left = 20
+shadow_size = 2
+shadow_offset = Vector2( -1, 1 )
+
+[sub_resource type="DynamicFont" id=35]
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=48]
+bg_color = Color( 0.45098, 0.156863, 0.156863, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=47]
+bg_color = Color( 0.263672, 0.0731277, 0.0731277, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0, 0, 0, 0.427451 )
+
+[sub_resource type="StyleBoxFlat" id=49]
+bg_color = Color( 0.0784314, 0.0784314, 0.0784314, 0.427451 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0, 0, 0, 0.654902 )
+
+[sub_resource type="Theme" id=7]
+Button/styles/disabled = SubResource( 6 )
+Button/styles/focus = SubResource( 6 )
+Button/styles/hover = SubResource( 49 )
+Button/styles/normal = SubResource( 6 )
+Button/styles/pressed = SubResource( 12 )
+
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0.0313726, 0.0313726, 0.0509804, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.180392 )
+shadow_size = 1
+shadow_offset = Vector2( 0, 1 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 20
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=25]
+font_data = ExtResource( 5 )
+
+[sub_resource type="Shader" id=43]
+code = "shader_type canvas_item;
+
+uniform float blur_amount : hint_range(0, 5);
+
+void fragment() {
+	COLOR = textureLod(SCREEN_TEXTURE, SCREEN_UV, blur_amount);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=44]
+shader = SubResource( 43 )
+shader_param/blur_amount = 2.0
+
+[sub_resource type="CanvasItemMaterial" id=45]
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.0313726, 0.0313726, 0.0509804, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.0862745 )
+shadow_size = 1
+shadow_offset = Vector2( 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=28]
+bg_color = Color( 0.013916, 0.013916, 0.03125, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 1
+shadow_offset = Vector2( 0, 1 )
+
+[sub_resource type="DynamicFontData" id=29]
+font_path = "res://Fonts/Roboto-Black.ttf"
+
+[sub_resource type="DynamicFont" id=30]
+font_data = SubResource( 29 )
+
+[sub_resource type="DynamicFont" id=31]
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=32]
+size = 25
+font_data = SubResource( 29 )
+
+[sub_resource type="DynamicFont" id=33]
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=37]
+bg_color = Color( 0.0588235, 0.0588235, 0.0941176, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=38]
+blend_mode = 2
+
+[sub_resource type="DynamicFont" id=39]
+size = 30
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=40]
+size = 30
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=41]
+size = 40
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxEmpty" id=42]
+
+[sub_resource type="DynamicFont" id=36]
+size = 20
+use_filter = true
+font_data = ExtResource( 5 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [ 1271.0 ]
+}
+_Pontos = NodePath("Pontos")
+_Frequencia = NodePath("Tween/rate")
+texto_da_noticia = NodePath("CanvasLayer/Noticias/Panel2/Panel4/noticeText")
+noticias = [ "O mundo passa por uma crise global de desigualdade social.", "Os líderes mundiais aparentam não se importar com a classe trabalhadora.", "" ]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+material = SubResource( 20 )
+position = Vector2( 415, -57 )
+amount = 15
+lifetime = 4.0
+randomness = 1.0
+texture = ExtResource( 1 )
+emission_shape = 2
+emission_rect_extents = Vector2( 470, 1 )
+direction = Vector2( 0, 1 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 250.0
+initial_velocity_random = 0.2
+angular_velocity = 224.59
+angular_velocity_random = 1.0
+scale_amount_curve = SubResource( 21 )
+color_ramp = SubResource( 22 )
+
+[node name="Icon2" type="Sprite" parent="."]
+position = Vector2( 411, 360 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Icon2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon2/Area2D"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Tween" type="Tween" parent="Icon2"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Icon2"]
+stream = ExtResource( 11 )
+volume_db = -80.0
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 9.0
+margin_top = 9.0
+margin_right = 103.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 47, 8 )
+custom_fonts/font = SubResource( 2 )
+text = "Linhas de código:"
+
+[node name="Pontos" type="Label" parent="."]
+margin_left = 9.0
+margin_top = 22.0
+margin_right = 160.0
+margin_bottom = 82.0
+rect_pivot_offset = Vector2( 31, 37 )
+custom_fonts/font = SubResource( 3 )
+text = "0"
+
+[node name="frequencia" type="Label" parent="."]
+margin_left = 9.0
+margin_top = 81.0
+margin_right = 103.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 47, 8 )
+custom_fonts/font = SubResource( 2 )
+text = "Códigos por segundo:"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="button" type="Panel" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -93.5
+margin_right = 93.5
+margin_bottom = 38.0
+custom_styles/panel = SubResource( 34 )
+
+[node name="Button" type="Button" parent="CanvasLayer/button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 15 )
+enabled_focus_mode = 0
+text = "Conquistas"
+flat = true
+
+[node name="Noticias" type="Panel" parent="CanvasLayer"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -57.0
+custom_styles/panel = SubResource( 16 )
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/Noticias"]
+anchor_left = 0.146
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.11998
+margin_top = 8.0
+margin_right = -451.0
+margin_bottom = -8.0
+rect_pivot_offset = Vector2( -524, -467 )
+rect_clip_content = true
+custom_styles/panel = SubResource( 17 )
+
+[node name="Panel4" type="Panel" parent="CanvasLayer/Noticias/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 14.0
+margin_right = -11.0
+rect_pivot_offset = Vector2( -524, -467 )
+rect_clip_content = true
+custom_styles/panel = SubResource( 17 )
+
+[node name="noticeText" type="Label" parent="CanvasLayer/Noticias/Panel2/Panel4"]
+anchor_right = 0.992
+anchor_bottom = 1.0
+margin_right = -0.0640259
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 26 )
+valign = 1
+
+[node name="Panel3" type="Panel" parent="CanvasLayer/Noticias"]
+anchor_right = 0.137
+anchor_bottom = 1.0
+margin_left = 11.0
+margin_top = 8.0
+margin_right = 0.639984
+margin_bottom = -8.0
+custom_styles/panel = SubResource( 18 )
+
+[node name="Label" type="Label" parent="CanvasLayer/Noticias/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 19 )
+text = "Notícias"
+align = 1
+valign = 1
+
+[node name="Loja" type="Panel" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -441.0
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 6 )
+_Aba = NodePath("Nums/Panel/Button")
+_Numeros = NodePath("Nums")
+_preco_clicker = NodePath("VBoxContainer/ScrollContainer/Items/Editor/HBoxContainer/Label2")
+_clicker1 = NodePath("Nums/editor")
+_preco_programador = NodePath("VBoxContainer/ScrollContainer/Items/Programadores/HBoxContainer/Label2")
+_programador1 = NodePath("Nums/prog")
+_preco_pecas = NodePath("VBoxContainer/ScrollContainer/Items/peças/HBoxContainer/Label2")
+_pecas1 = NodePath("Nums/pecas")
+_preco_xicaras = NodePath("VBoxContainer/ScrollContainer/Items/xicara/HBoxContainer/Label2")
+_xicaras1 = NodePath("Nums/Xicara")
+_preco_itch = NodePath("VBoxContainer/ScrollContainer/Items/itchio/HBoxContainer/Label2")
+_itch1 = NodePath("Nums/Itch")
+_preco_empresa = NodePath("VBoxContainer/ScrollContainer/Items/empresa/HBoxContainer/Label2")
+_empresa1 = NodePath("Nums/Empresa")
+_preco_hacker = NodePath("VBoxContainer/ScrollContainer/Items/hacker/HBoxContainer/Label2")
+_hacker1 = NodePath("Nums/hacker")
+_preco_Bcentral = NodePath("VBoxContainer/ScrollContainer/Items/Bcentral/HBoxContainer/Label2")
+_Bcentral1 = NodePath("Nums/bcentral")
+_preco_PF = NodePath("VBoxContainer/ScrollContainer/Items/PF/HBoxContainer/Label2")
+_PF1 = NodePath("Nums/pf")
+_preco_Gov = NodePath("VBoxContainer/ScrollContainer/Items/Gov/HBoxContainer/Label2")
+_Gov1 = NodePath("Nums/gov")
+_preco_FBI = NodePath("VBoxContainer/ScrollContainer/Items/FBI/HBoxContainer/Label2")
+_FBI1 = NodePath("Nums/fbi")
+_preco_Interpol = NodePath("VBoxContainer/ScrollContainer/Items/Interpol/HBoxContainer/Label2")
+_interpol1 = NodePath("Nums/interpol")
+_preco_dominion = NodePath("VBoxContainer/ScrollContainer/Items/Dominacao/HBoxContainer/Label2")
+_dominion1 = NodePath("Nums/mundo")
+
+[node name="Nums" type="Panel" parent="CanvasLayer/Loja"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 13 )
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Loja/Nums"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -38.0
+margin_top = -93.0
+margin_bottom = 94.0
+custom_styles/panel = SubResource( 14 )
+
+[node name="Button" type="Button" parent="CanvasLayer/Loja/Nums/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 15 )
+enabled_focus_mode = 0
+flat = true
+
+[node name="editor" type="Label" parent="CanvasLayer/Loja/Nums"]
+margin_left = 35.0
+margin_right = 105.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "0"
+valign = 1
+script = ExtResource( 7 )
+_follower = NodePath("../../VBoxContainer/ScrollContainer/Items/Editor")
+_Max = 20
+
+[node name="prog" type="Label" parent="CanvasLayer/Loja/Nums"]
+margin_left = 35.0
+margin_right = 105.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "0"
+valign = 1
+script = ExtResource( 7 )
+_follower = NodePath("../../VBoxContainer/ScrollContainer/Items/Programadores")
+_Max = 20
+
+[node name="pecas" type="Label" parent="CanvasLayer/Loja/Nums"]
+margin_left = 35.0
+margin_right = 105.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "0"
+valign = 1
+script = ExtResource( 7 )
+_follower = NodePath("../../VBoxContainer/ScrollContainer/Items/peças")
+_Max = 17
+
+[node name="Xicara" type="Label" parent="CanvasLayer/Loja/Nums"]
+margin_left = 35.0
+margin_right = 105.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "0"
+valign = 1
+script = ExtResource( 7 )
+_follower = NodePath("../../VBoxContainer/ScrollContainer/Items/xicara")
+
+[node name="Itch" type="Label" parent="CanvasLayer/Loja/Nums"]
+margin_left = 35.0
+margin_right = 105.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "0"
+valign = 1
+script = ExtResource( 7 )
+_follower = NodePath("../../VBoxContainer/ScrollContainer/Items/itchio")
+
+[node name="Empresa" type="Label" parent="CanvasLayer/Loja/Nums"]
+margin_left = 35.0
+margin_right = 105.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "0"
+valign = 1
+script = ExtResource( 7 )
+_follower = NodePath("../../VBoxContainer/ScrollContainer/Items/empresa")
+
+[node name="hacker" type="Label" parent="CanvasLayer/Loja/Nums"]
+margin_left = 35.0
+margin_right = 105.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "0"
+valign = 1
+script = ExtResource( 7 )
+_follower = NodePath("../../VBoxContainer/ScrollContainer/Items/hacker")
+
+[node name="bcentral" type="Label" parent="CanvasLayer/Loja/Nums"]
+margin_left = 35.0
+margin_right = 105.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "0"
+valign = 1
+script = ExtResource( 7 )
+_follower = NodePath("../../VBoxContainer/ScrollContainer/Items/Bcentral")
+
+[node name="pf" type="Label" parent="CanvasLayer/Loja/Nums"]
+margin_left = 35.0
+margin_right = 105.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "0"
+valign = 1
+script = ExtResource( 7 )
+_follower = NodePath("../../VBoxContainer/ScrollContainer/Items/PF")
+
+[node name="gov" type="Label" parent="CanvasLayer/Loja/Nums"]
+margin_left = 35.0
+margin_right = 105.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "0"
+valign = 1
+script = ExtResource( 7 )
+_follower = NodePath("../../VBoxContainer/ScrollContainer/Items/Gov")
+
+[node name="fbi" type="Label" parent="CanvasLayer/Loja/Nums"]
+margin_left = 35.0
+margin_right = 105.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "0"
+valign = 1
+script = ExtResource( 7 )
+_follower = NodePath("../../VBoxContainer/ScrollContainer/Items/FBI")
+
+[node name="interpol" type="Label" parent="CanvasLayer/Loja/Nums"]
+margin_left = 35.0
+margin_right = 105.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "0"
+valign = 1
+script = ExtResource( 7 )
+_follower = NodePath("../../VBoxContainer/ScrollContainer/Items/Interpol")
+
+[node name="mundo" type="Label" parent="CanvasLayer/Loja/Nums"]
+margin_left = 35.0
+margin_right = 105.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "0"
+valign = 1
+script = ExtResource( 7 )
+_follower = NodePath("../../VBoxContainer/ScrollContainer/Items/Dominacao")
+
+[node name="RecursosBG" type="Panel" parent="CanvasLayer/Loja"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 10 )
+
+[node name="Menu" type="Button" parent="CanvasLayer/Loja/RecursosBG"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -87.0
+margin_top = 18.0
+margin_right = -9.0
+margin_bottom = 54.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 35 )
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 47 )
+custom_styles/focus = SubResource( 47 )
+custom_styles/disabled = SubResource( 47 )
+custom_styles/normal = SubResource( 47 )
+enabled_focus_mode = 0
+text = "Menu"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Loja"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -211.5
+margin_top = -342.0
+margin_right = 211.5
+margin_bottom = 342.0
+mouse_filter = 2
+custom_constants/separation = 10
+
+[node name="Title" type="HBoxContainer" parent="CanvasLayer/Loja/VBoxContainer"]
+margin_right = 423.0
+margin_bottom = 36.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Loja/VBoxContainer/Title"]
+margin_right = 423.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 5 )
+text = "Recursos"
+align = 1
+valign = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Loja/VBoxContainer"]
+margin_top = 46.0
+margin_right = 423.0
+margin_bottom = 684.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Items" type="VBoxContainer" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer"]
+margin_right = 423.0
+margin_bottom = 218.0
+size_flags_horizontal = 3
+
+[node name="Editor" type="Button" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items"]
+margin_right = 423.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 7 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Editor"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+
+[node name="Text" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Editor/HBoxContainer"]
+margin_right = 198.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "Melhorar Editor de Códigos"
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Editor/HBoxContainer"]
+margin_left = 202.0
+margin_right = 393.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 9 )
+text = "50"
+align = 2
+valign = 1
+
+[node name="Programadores" type="Button" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items"]
+margin_top = 74.0
+margin_right = 423.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 7 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Programadores"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+
+[node name="Text" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Programadores/HBoxContainer"]
+margin_right = 194.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "Contratar Programador"
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Programadores/HBoxContainer"]
+margin_left = 198.0
+margin_right = 393.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 9 )
+text = "300"
+align = 2
+valign = 1
+
+[node name="peças" type="Button" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items"]
+margin_top = 148.0
+margin_right = 423.0
+margin_bottom = 218.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 7 )
+enabled_focus_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/peças"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+
+[node name="Text" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/peças/HBoxContainer"]
+margin_right = 194.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "Peça para Computador"
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/peças/HBoxContainer"]
+margin_left = 198.0
+margin_right = 393.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 9 )
+text = "850"
+align = 2
+valign = 1
+
+[node name="xicara" type="Button" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items"]
+visible = false
+margin_top = 222.0
+margin_right = 411.0
+margin_bottom = 292.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 7 )
+enabled_focus_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/xicara"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+
+[node name="Text" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/xicara/HBoxContainer"]
+margin_right = 188.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "Xícara de Café"
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/xicara/HBoxContainer"]
+margin_left = 192.0
+margin_right = 381.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 9 )
+text = "1200"
+align = 2
+valign = 1
+
+[node name="itchio" type="Button" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items"]
+visible = false
+margin_top = 296.0
+margin_right = 411.0
+margin_bottom = 366.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 7 )
+enabled_focus_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/itchio"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+
+[node name="Text" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/itchio/HBoxContainer"]
+margin_right = 188.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "Invadir o Itch.io"
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/itchio/HBoxContainer"]
+margin_left = 192.0
+margin_right = 381.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 9 )
+text = "50000"
+align = 2
+valign = 1
+
+[node name="empresa" type="Button" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items"]
+visible = false
+margin_top = 222.0
+margin_right = 423.0
+margin_bottom = 292.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 7 )
+enabled_focus_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/empresa"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+
+[node name="Text" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/empresa/HBoxContainer"]
+margin_right = 218.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "Montar uma Empresa Secreta"
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/empresa/HBoxContainer"]
+margin_left = 222.0
+margin_right = 393.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 9 )
+text = "12000"
+align = 2
+valign = 1
+
+[node name="hacker" type="Button" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items"]
+visible = false
+margin_top = 222.0
+margin_right = 423.0
+margin_bottom = 292.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 7 )
+enabled_focus_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/hacker"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+
+[node name="Text" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/hacker/HBoxContainer"]
+margin_right = 209.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "Contratar Hacker Profissional"
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/hacker/HBoxContainer"]
+margin_left = 213.0
+margin_right = 393.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 9 )
+text = "58000"
+align = 2
+valign = 1
+
+[node name="Bcentral" type="Button" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items"]
+visible = false
+margin_top = 222.0
+margin_right = 423.0
+margin_bottom = 292.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 7 )
+enabled_focus_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Bcentral"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+
+[node name="Text" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Bcentral/HBoxContainer"]
+margin_right = 194.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "Invadir o Banco Central"
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Bcentral/HBoxContainer"]
+margin_left = 198.0
+margin_right = 393.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 9 )
+text = "250000"
+align = 2
+valign = 1
+
+[node name="PF" type="Button" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items"]
+visible = false
+margin_top = 296.0
+margin_right = 423.0
+margin_bottom = 366.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 7 )
+enabled_focus_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/PF"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+
+[node name="Text" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/PF/HBoxContainer"]
+margin_right = 194.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "Invadir a Polícia Federal"
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/PF/HBoxContainer"]
+margin_left = 198.0
+margin_right = 393.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 9 )
+text = "1000000"
+align = 2
+valign = 1
+
+[node name="Gov" type="Button" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items"]
+visible = false
+margin_top = 370.0
+margin_right = 423.0
+margin_bottom = 440.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 7 )
+enabled_focus_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Gov"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+
+[node name="Text" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Gov/HBoxContainer"]
+margin_right = 215.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "Invadir o Servidor do Governo"
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Gov/HBoxContainer"]
+margin_left = 219.0
+margin_right = 393.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 9 )
+text = "2500000"
+align = 2
+valign = 1
+
+[node name="FBI" type="Button" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items"]
+visible = false
+margin_top = 444.0
+margin_right = 423.0
+margin_bottom = 514.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 7 )
+enabled_focus_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/FBI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+
+[node name="Text" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/FBI/HBoxContainer"]
+margin_right = 194.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "Invadir o FBI"
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/FBI/HBoxContainer"]
+margin_left = 198.0
+margin_right = 393.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 9 )
+text = "6000000"
+align = 2
+valign = 1
+
+[node name="Interpol" type="Button" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items"]
+visible = false
+margin_top = 518.0
+margin_right = 423.0
+margin_bottom = 588.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 7 )
+enabled_focus_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Interpol"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+
+[node name="Text" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Interpol/HBoxContainer"]
+margin_right = 194.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "Invadir a Interpol"
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Interpol/HBoxContainer"]
+margin_left = 198.0
+margin_right = 393.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 9 )
+text = "10000000"
+align = 2
+valign = 1
+
+[node name="Dominacao" type="Button" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items"]
+visible = false
+margin_top = 592.0
+margin_right = 411.0
+margin_bottom = 662.0
+rect_min_size = Vector2( 0, 70 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 7 )
+enabled_focus_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Dominacao"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_right = -15.0
+
+[node name="Text" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Dominacao/HBoxContainer"]
+margin_right = 188.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 8 )
+text = "Dominar o mundo"
+valign = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Dominacao/HBoxContainer"]
+margin_left = 192.0
+margin_right = 381.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 9 )
+text = "59999999"
+align = 2
+valign = 1
+
+[node name="Tween" type="Tween" parent="CanvasLayer/Loja"]
+
+[node name="botoes" type="AudioStreamPlayer" parent="CanvasLayer/Loja"]
+stream = ExtResource( 13 )
+pitch_scale = 1.3
+
+[node name="Archiviment" type="Panel" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -174.5
+margin_top = -90.0
+margin_right = 174.5
+margin_bottom = -12.0
+custom_styles/panel = SubResource( 23 )
+script = ExtResource( 8 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Archiviment"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 7.0
+margin_right = -7.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Archiviment/HBoxContainer"]
+margin_right = 335.0
+margin_bottom = 78.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 24 )
+text = "Archivement"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Button" type="Button" parent="CanvasLayer/Archiviment"]
+modulate = Color( 1, 0, 0, 1 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -54.0
+margin_right = 1.0
+margin_bottom = 25.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 25 )
+text = "X"
+flat = true
+align = 2
+
+[node name="Tween" type="Tween" parent="CanvasLayer/Archiviment"]
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Archiviment"]
+
+[node name="Notification" type="AudioStreamPlayer" parent="CanvasLayer/Archiviment"]
+stream = ExtResource( 12 )
+pitch_scale = 1.5
+
+[node name="Achives" type="Control" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 10 )
+archives = [ NodePath("Panel/ScrollContainer/Items/1"), NodePath("Panel/ScrollContainer/Items/2"), NodePath("Panel/ScrollContainer/Items/3"), NodePath("Panel/ScrollContainer/Items/4"), NodePath("Panel/ScrollContainer/Items/5"), NodePath("Panel/ScrollContainer/Items/6"), NodePath("Panel/ScrollContainer/Items/7"), NodePath("Panel/ScrollContainer/Items/8"), NodePath("Panel/ScrollContainer/Items/9"), NodePath("Panel/ScrollContainer/Items/10") ]
+items = [ NodePath("../Loja/VBoxContainer/ScrollContainer/Items/xicara"), NodePath("../Loja/VBoxContainer/ScrollContainer/Items/itchio"), NodePath("../Loja/VBoxContainer/ScrollContainer/Items/empresa"), NodePath("../Loja/VBoxContainer/ScrollContainer/Items/hacker"), NodePath("../Loja/VBoxContainer/ScrollContainer/Items/Bcentral"), NodePath("../Loja/VBoxContainer/ScrollContainer/Items/PF"), NodePath("../Loja/VBoxContainer/ScrollContainer/Items/Gov"), NodePath("../Loja/VBoxContainer/ScrollContainer/Items/FBI"), NodePath("../Loja/VBoxContainer/ScrollContainer/Items/Interpol"), NodePath("../Loja/VBoxContainer/ScrollContainer/Items/Dominacao") ]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Achives"]
+material = SubResource( 44 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.219608, 0.219608, 0.219608, 0.890196 )
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/Achives"]
+modulate = Color( 1, 1, 1, 0.729412 )
+material = SubResource( 45 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.890196 )
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Achives"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -224.0
+margin_top = -339.0
+margin_right = 224.0
+margin_bottom = 339.0
+rect_pivot_offset = Vector2( 224, 342 )
+custom_styles/panel = SubResource( 27 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Achives/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -211.0
+margin_top = -277.0
+margin_right = 212.0
+margin_bottom = 319.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+
+[node name="Items" type="VBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer"]
+margin_right = 423.0
+margin_bottom = 1076.0
+size_flags_horizontal = 3
+
+[node name="1" type="Panel" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items"]
+margin_right = 411.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 0, 110 )
+custom_styles/panel = SubResource( 28 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 7.0
+margin_right = -7.0
+margin_bottom = -7.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/1/VBoxContainer"]
+margin_right = 396.0
+margin_bottom = 19.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/1/VBoxContainer/VBoxContainer"]
+margin_right = 226.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 30 )
+text = "Agora o godot abre em 1,5 sec!"
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/1/VBoxContainer"]
+margin_top = 23.0
+margin_right = 396.0
+margin_bottom = 27.0
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/1/VBoxContainer"]
+margin_top = 31.0
+margin_right = 396.0
+margin_bottom = 96.0
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/1/VBoxContainer/VBoxContainer2"]
+margin_right = 396.0
+margin_bottom = 65.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 31 )
+text = "Conseguiu comprar algumas peças para seu notebook antigo com o dinheiro que sua vó te deu de aniversário, parabéns."
+autowrap = true
+
+[node name="2" type="Panel" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items"]
+margin_top = 114.0
+margin_right = 411.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 0, 90 )
+custom_styles/panel = SubResource( 28 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 7.0
+margin_right = -7.0
+margin_bottom = -7.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/2/VBoxContainer"]
+margin_right = 396.0
+margin_bottom = 19.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/2/VBoxContainer/VBoxContainer"]
+margin_right = 309.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 30 )
+text = "Os programadores estão inspirados agora!"
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/2/VBoxContainer"]
+margin_top = 23.0
+margin_right = 396.0
+margin_bottom = 27.0
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/2/VBoxContainer"]
+margin_top = 31.0
+margin_right = 396.0
+margin_bottom = 76.0
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/2/VBoxContainer/VBoxContainer2"]
+margin_right = 396.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 31 )
+text = "Nada como uma boa xícara de café para animar os dedos e clicar mais, não é?"
+autowrap = true
+
+[node name="3" type="Panel" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items"]
+margin_top = 208.0
+margin_right = 411.0
+margin_bottom = 318.0
+rect_min_size = Vector2( 0, 110 )
+rect_clip_content = true
+custom_styles/panel = SubResource( 28 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 7.0
+margin_right = -7.0
+margin_bottom = -7.0
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/3/VBoxContainer"]
+margin_right = 396.0
+margin_bottom = 41.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/3/VBoxContainer/VBoxContainer"]
+margin_right = 396.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 30 )
+text = "Você acaba de ter acesso a uma base gigante de códigos!"
+autowrap = true
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/3/VBoxContainer"]
+margin_top = 45.0
+margin_right = 396.0
+margin_bottom = 49.0
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/3/VBoxContainer"]
+margin_top = 53.0
+margin_right = 396.0
+margin_bottom = 96.0
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/3/VBoxContainer/VBoxContainer2"]
+margin_right = 396.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 31 )
+text = "Isto é realmente impressionante. Quantas linhas de código foram necessárias para invadir um site inteiro?"
+autowrap = true
+
+[node name="4" type="Panel" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items"]
+margin_top = 322.0
+margin_right = 411.0
+margin_bottom = 452.0
+rect_min_size = Vector2( 0, 130 )
+custom_styles/panel = SubResource( 28 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 7.0
+margin_right = -7.0
+margin_bottom = -7.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/4/VBoxContainer"]
+margin_right = 396.0
+margin_bottom = 41.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/4/VBoxContainer/VBoxContainer"]
+margin_right = 396.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 30 )
+text = "Ninguém sabe onde é, mas você cresce cada vez mais!"
+autowrap = true
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/4/VBoxContainer"]
+margin_top = 45.0
+margin_right = 396.0
+margin_bottom = 49.0
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/4/VBoxContainer"]
+margin_top = 53.0
+margin_right = 396.0
+margin_bottom = 116.0
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/4/VBoxContainer/VBoxContainer2"]
+margin_right = 396.0
+margin_bottom = 63.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 31 )
+text = "Talvez esteja no SUBTERRÂNIO, talvez esteja dentro de uma garagem, mas uma coisa sabemos, você é bom em esconder pistas, já sua guia anônima..."
+autowrap = true
+
+[node name="5" type="Panel" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items"]
+margin_top = 456.0
+margin_right = 411.0
+margin_bottom = 546.0
+rect_min_size = Vector2( 0, 90 )
+custom_styles/panel = SubResource( 28 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 7.0
+margin_right = -7.0
+margin_bottom = -7.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/5/VBoxContainer"]
+margin_right = 396.0
+margin_bottom = 19.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/5/VBoxContainer/VBoxContainer"]
+margin_right = 174.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 30 )
+text = "Sua causa ganha poder!"
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/5/VBoxContainer"]
+margin_top = 23.0
+margin_right = 396.0
+margin_bottom = 27.0
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/5/VBoxContainer"]
+margin_top = 31.0
+margin_right = 396.0
+margin_bottom = 76.0
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/5/VBoxContainer/VBoxContainer2"]
+margin_right = 396.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 31 )
+text = "No submundo você é conhecido como: o grande raquimen."
+autowrap = true
+
+[node name="6" type="Panel" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items"]
+margin_top = 550.0
+margin_right = 411.0
+margin_bottom = 660.0
+rect_min_size = Vector2( 0, 110 )
+custom_styles/panel = SubResource( 28 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/6"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 7.0
+margin_right = -7.0
+margin_bottom = -7.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/6/VBoxContainer"]
+margin_right = 396.0
+margin_bottom = 19.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/6/VBoxContainer/VBoxContainer"]
+margin_right = 209.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 30 )
+text = "Quem pode parar uma ideia?"
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/6/VBoxContainer"]
+margin_top = 23.0
+margin_right = 396.0
+margin_bottom = 27.0
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/6/VBoxContainer"]
+margin_top = 31.0
+margin_right = 396.0
+margin_bottom = 96.0
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/6/VBoxContainer/VBoxContainer2"]
+margin_right = 396.0
+margin_bottom = 65.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 31 )
+text = "Nem o firewall, nem o watergate, muito menos a milícia com seus computadores da positivo conseguem parar este jovem visionário."
+autowrap = true
+
+[node name="7" type="Panel" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items"]
+margin_top = 664.0
+margin_right = 411.0
+margin_bottom = 754.0
+rect_min_size = Vector2( 0, 90 )
+custom_styles/panel = SubResource( 28 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/7"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 7.0
+margin_right = -7.0
+margin_bottom = -7.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/7/VBoxContainer"]
+margin_right = 396.0
+margin_bottom = 19.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/7/VBoxContainer/VBoxContainer"]
+margin_right = 272.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 30 )
+text = "Este país já é seu! Curvam-se à você."
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/7/VBoxContainer"]
+margin_top = 23.0
+margin_right = 396.0
+margin_bottom = 27.0
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/7/VBoxContainer"]
+margin_top = 31.0
+margin_right = 396.0
+margin_bottom = 76.0
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/7/VBoxContainer/VBoxContainer2"]
+margin_right = 396.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 31 )
+text = "Hm.. quer dizer que você tem planos maiores do que eu pensei, muito cuidado com suas ações."
+autowrap = true
+
+[node name="8" type="Panel" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items"]
+margin_top = 758.0
+margin_right = 411.0
+margin_bottom = 868.0
+rect_min_size = Vector2( 0, 110 )
+custom_styles/panel = SubResource( 28 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/8"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 7.0
+margin_right = -7.0
+margin_bottom = -7.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/8/VBoxContainer"]
+margin_right = 396.0
+margin_bottom = 19.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/8/VBoxContainer/VBoxContainer"]
+margin_right = 250.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 30 )
+text = "Espera, qual é o seu objetivo aqui?"
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/8/VBoxContainer"]
+margin_top = 23.0
+margin_right = 396.0
+margin_bottom = 27.0
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/8/VBoxContainer"]
+margin_top = 31.0
+margin_right = 396.0
+margin_bottom = 96.0
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/8/VBoxContainer/VBoxContainer2"]
+margin_right = 396.0
+margin_bottom = 65.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 31 )
+text = "Não consigo entender, mas como sou apenas um balão de conquistas não posso dizer o que você deve ou não fazer."
+autowrap = true
+
+[node name="9" type="Panel" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items"]
+margin_top = 872.0
+margin_right = 411.0
+margin_bottom = 962.0
+rect_min_size = Vector2( 0, 90 )
+custom_styles/panel = SubResource( 28 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/9"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 7.0
+margin_right = -7.0
+margin_bottom = -7.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/9/VBoxContainer"]
+margin_right = 396.0
+margin_bottom = 19.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/9/VBoxContainer/VBoxContainer"]
+margin_right = 376.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 30 )
+text = "O mundo não pode ser monopolizado assim! PARE!!!"
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/9/VBoxContainer"]
+margin_top = 23.0
+margin_right = 396.0
+margin_bottom = 27.0
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/9/VBoxContainer"]
+margin_top = 31.0
+margin_right = 396.0
+margin_bottom = 76.0
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/9/VBoxContainer/VBoxContainer2"]
+margin_right = 396.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 31 )
+text = "Calma lá amigo, eu tenho família, você não? Precisamos comer pelo menos um pãozinho."
+autowrap = true
+
+[node name="10" type="Panel" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items"]
+margin_top = 966.0
+margin_right = 411.0
+margin_bottom = 1076.0
+rect_min_size = Vector2( 0, 110 )
+custom_styles/panel = SubResource( 28 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/10"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 7.0
+margin_right = -7.0
+margin_bottom = -7.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/10/VBoxContainer"]
+margin_right = 412.0
+margin_bottom = 19.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/10/VBoxContainer/VBoxContainer"]
+margin_right = 412.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 30 )
+text = "Você conseguiu. É tudo seu agora! Que Deus nos ajude..."
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/10/VBoxContainer"]
+margin_top = 23.0
+margin_right = 412.0
+margin_bottom = 27.0
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/10/VBoxContainer"]
+margin_top = 31.0
+margin_right = 412.0
+margin_bottom = 96.0
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="CanvasLayer/Achives/Panel/ScrollContainer/Items/10/VBoxContainer/VBoxContainer2"]
+margin_right = 412.0
+margin_bottom = 65.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 31 )
+text = "O mundo clama novamente por ajuda, desta vez o fim é inevitável, nada mais pode ser feito, por favor, devolva nosso ouro."
+autowrap = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Achives/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -113.0
+margin_top = 14.0
+margin_right = 113.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 32 )
+text = "Conquistas"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Achives/Panel"]
+modulate = Color( 1, 0, 0, 1 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -63.0
+margin_bottom = 60.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 33 )
+text = "X"
+flat = true
+
+[node name="Tween" type="Tween" parent="CanvasLayer/Achives"]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 37 )
+script = ExtResource( 14 )
+
+[node name="Tween" type="Tween" parent="CanvasLayer/Panel"]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Panel"]
+modulate = Color( 0.0588235, 0.0588235, 0.0941176, 1 )
+material = SubResource( 38 )
+margin_left = -221.0
+margin_top = 54.0
+margin_right = 723.0
+margin_bottom = 921.0
+rect_rotation = -15.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="Label2" type="Label" parent="CanvasLayer/Panel"]
+anchor_right = 1.0
+margin_bottom = 81.0
+custom_fonts/font = SubResource( 39 )
+text = "Mundo dominado"
+align = 1
+valign = 1
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Panel/Label2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -472.0
+margin_top = 81.0
+margin_right = 472.0
+margin_bottom = 92.0
+
+[node name="Label3" type="RichTextLabel" parent="CanvasLayer/Panel"]
+anchor_right = 1.0
+margin_left = 587.0
+margin_top = 204.0
+margin_right = -17.0
+margin_bottom = 656.0
+custom_fonts/normal_font = SubResource( 40 )
+bbcode_enabled = true
+bbcode_text = "[shake rate=1.5 level=15]	Um grupo de hacker extremistas fizeram uma revolução e tomaram para sí o poder de dominação global, começou como uma guerra política, e terminou em um desastre sem precedentes... tudo que o mundo queria era um pouco de paz, invés disso, receberam mais tempos de fome, pobreza e sofrimento, quem será que poderia resurgir das cinzas e salvar toda uma espécie?
+	Uma coisa é certa: o mal jamais perpetuará!
+	
+[right]\"Jocka\""
+visible_characters = 0
+percent_visible = 0.0
+text = "	Um grupo de hacker extremistas fizeram uma revolução e tomaram para sí o poder de dominação global, começou como uma guerra política, e terminou em um desastre sem precedentes... tudo que o mundo queria era um pouco de paz, invés disso, receberam mais tempos de fome, pobreza e sofrimento, quem será que poderia resurgir das cinzas e salvar toda uma espécie?
+	Uma coisa é certa: o mal jamais perpetuará!
+	
+\"Jocka\""
+
+[node name="Sair" type="Button" parent="CanvasLayer/Panel"]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 44.0
+margin_top = -79.0
+margin_right = 444.0
+margin_bottom = -19.0
+rect_min_size = Vector2( 0, 60 )
+rect_pivot_offset = Vector2( 0, 30 )
+focus_neighbour_bottom = NodePath("../Jogar")
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 41 )
+custom_styles/focus = SubResource( 42 )
+text = "Sair"
+flat = true
+align = 0
+
+[node name="Sair2" type="Button" parent="CanvasLayer/Panel"]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 41.0
+margin_top = -80.0
+margin_right = 441.0
+margin_bottom = -20.0
+rect_min_size = Vector2( 0, 60 )
+rect_pivot_offset = Vector2( 0, 30 )
+focus_neighbour_bottom = NodePath("../Jogar")
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+custom_colors/font_color_focus = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.207843, 0.333333, 0.439216, 1 )
+custom_fonts/font = SubResource( 41 )
+custom_styles/focus = SubResource( 42 )
+text = "Sair"
+flat = true
+align = 0
+
+[node name="Noticias" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="rate" type="Label" parent="Tween"]
+margin_left = 9.0
+margin_top = 96.0
+margin_right = 160.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 31, 37 )
+custom_fonts/font = SubResource( 36 )
+text = "0"
+
+[node name="porSegundo" type="Timer" parent="."]
+autostart = true
+
+[node name="Special" type="Timer" parent="."]
+one_shot = true
+
+[node name="Git" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -5.0
+
+[node name="Buttons" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+
+[connection signal="input_event" from="Icon2/Area2D" to="Icon2" method="_on_Area2D_input_event"]
+[connection signal="pressed" from="CanvasLayer/button/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Loja/Nums/Panel/Button" to="CanvasLayer/Loja" method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Loja/RecursosBG/Menu" to="." method="_on_Menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Editor" to="CanvasLayer/Loja" method="_on_Editor_pressed"]
+[connection signal="pressed" from="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Programadores" to="CanvasLayer/Loja" method="_on_Programadores_pressed"]
+[connection signal="pressed" from="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/peças" to="CanvasLayer/Loja" method="_on_peca_pressed"]
+[connection signal="pressed" from="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/xicara" to="CanvasLayer/Loja" method="_on_xicara_pressed"]
+[connection signal="pressed" from="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/itchio" to="CanvasLayer/Loja" method="_on_itchio_pressed"]
+[connection signal="pressed" from="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/empresa" to="CanvasLayer/Loja" method="_on_empresa_pressed"]
+[connection signal="pressed" from="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/hacker" to="CanvasLayer/Loja" method="_on_hacker_pressed"]
+[connection signal="pressed" from="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Bcentral" to="CanvasLayer/Loja" method="_on_Bcentral_pressed"]
+[connection signal="pressed" from="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/PF" to="CanvasLayer/Loja" method="_on_PF_pressed"]
+[connection signal="pressed" from="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Gov" to="CanvasLayer/Loja" method="_on_Gov_pressed"]
+[connection signal="pressed" from="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/FBI" to="CanvasLayer/Loja" method="_on_FBI_pressed"]
+[connection signal="pressed" from="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Interpol" to="CanvasLayer/Loja" method="_on_Interpol_pressed"]
+[connection signal="pressed" from="CanvasLayer/Loja/VBoxContainer/ScrollContainer/Items/Dominacao" to="CanvasLayer/Loja" method="_on_Dominacao_pressed"]
+[connection signal="tween_all_completed" from="CanvasLayer/Loja/Tween" to="CanvasLayer/Loja" method="_on_Tween_tween_all_completed"]
+[connection signal="pressed" from="CanvasLayer/Archiviment/Button" to="CanvasLayer/Archiviment" method="_on_Button_pressed"]
+[connection signal="timeout" from="CanvasLayer/Archiviment/Timer" to="CanvasLayer/Archiviment" method="_on_Timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/Achives/Panel/Button" to="CanvasLayer/Achives" method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/Sair2" to="CanvasLayer/Panel" method="_on_Sair_pressed"]
+[connection signal="timeout" from="Noticias" to="." method="_on_Noticias_timeout"]
+[connection signal="timeout" from="porSegundo" to="." method="_on_porSegundo_timeout"]
+[connection signal="timeout" from="Special" to="." method="_on_Special_timeout"]
